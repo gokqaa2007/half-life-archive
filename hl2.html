@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เนื้อเรื่อง Half-Life 2 (2004)</title>
+    <style>
+        /* สไตล์พื้นฐาน */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* ปุ่มนำทาง (Navigation) */
+        .nav-bar {
+            text-align: center;
+            padding: 15px;
+            background-color: #111;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            border-bottom: 2px solid #f39c12;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #f39c12;
+            color: #111;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e67e22;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* ส่วนหัวเรื่อง (Header) */
+        header {
+            /* ใช้รูป city17 เป็นพื้นหลังส่วนหัว */
+            background: linear-gradient(rgba(17, 24, 32, 0.8), rgba(17, 24, 32, 0.9)), url('images/city17.jpeg') center/cover;
+            color: #f39c12;
+            padding: 5rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #f39c12;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+        }
+        header p {
+            font-size: 1.3rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 15px auto 0;
+            font-weight: 300;
+        }
+
+        /* คอนเทนเนอร์เนื้อหา */
+        .container {
+            max-width: 1050px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ส่วนเนื้อเรื่องแต่ละบท */
+        .story-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 5rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #333;
+        }
+        .story-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        .text-content h2 {
+            color: #f39c12;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            border-left: 5px solid #f39c12;
+            padding-left: 15px;
+        }
+        .text-content p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        /* สไตล์รูปภาพ */
+        .image-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .image-content img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            border: 2px solid #444;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .image-content img:hover {
+            transform: translateY(-5px);
+            border-color: #f39c12;
+        }
+        
+        /* กรณีมี 2 รูปใน section เดียวกัน */
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .image-grid img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            margin-top: 2rem;
+            border-top: 2px solid #f39c12;
+        }
+
+        /* รองรับมือถือ */
+        @media (max-width: 800px) {
+            .story-section {
+                flex-direction: column !important;
+                gap: 20px;
+            }
+            .text-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- แถบเมนูกลับหน้าหลัก -->
+    <div class="nav-bar">
+        <a href="index.html" class="btn">⬅ กลับไปหน้าหลัก</a>
+    </div>
+
+    <!-- ส่วนหัว -->
+    <header>
+        <h1>Half-Life 2</h1>
+        <p>"ตื่นเถิด ดร.ฟรีแมน... ตื่นขึ้นมาพบกับเถ้าถ่าน" - การลุกฮือของมนุษยชาติเพื่อทวงคืนโลกจากเงื้อมมือของจักรวรรดิต่างดาว</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- บทที่ 1 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>การตื่นขึ้นใน City 17</h2>
+                <p>เวลาผ่านไปเกือบ 20 ปีนับตั้งแต่เหตุการณ์ที่ศูนย์วิจัย Black Mesa ชายปริศนา <strong>G-Man</strong> ได้ปลุก <strong>กอร์ดอน ฟรีแมน</strong> จากสภาวะหลับไหล (Stasis) และส่งเขามายังขบวนรถไฟที่กำลังมุ่งหน้าเข้าสู่ <strong>City 17</strong> เมืองศูนย์กลางการปกครองแห่งใหม่ของโลก</p>
+                <p>กอร์ดอนพบว่าโลกไม่ได้เป็นเหมือนเดิมอีกต่อไป มนุษยชาติถูกกวาดต้อนมาอยู่ในเมืองที่ถูกควบคุมอย่างเข้มงวด สภาพแวดล้อมเต็มไปด้วยความสิ้นหวังและการกดขี่ข่มเหง</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/G-Man.jpeg" alt="G-Man ชายลึกลับ">
+                <img src="images/city17.jpeg" alt="บรรยากาศของ City 17">
+            </div>
+        </div>
+
+        <!-- บทที่ 2 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ผู้กดขี่: จักรวรรดิ Combine</h2>
+                <p>โลกได้ตกเป็นเมืองขึ้นของ <strong>Combine (คอมไบน์)</strong> จักรวรรดิต่างดาวทรงพลังที่รุกรานโลกผ่านรอยแยกมิติ และเอาชนะกองทัพโลกได้ภายในเวลาเพียง <em>7 ชั่วโมง (Seven Hour War)</em></p>
+                <p><strong>ดร. วอลเลซ บรีน (Dr. Wallace Breen)</strong> อดีตผู้อำนวยการของ Black Mesa เป็นผู้เจรจายอมจำนนและได้รับการแต่งตั้งจาก Combine ให้เป็นผู้ปกครองหุ่นเชิดของโลก เขาสั่งการผ่านกองกำลังตำรวจปราบปรามที่เรียกว่า <strong>Civil Protection</strong> ซึ่งคอยทุบตีและจับกุมประชาชนที่ต่อต้าน</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/Breen.jpeg" alt="ดร. วอลเลซ บรีน">
+                <img src="images/CPO.jpeg" alt="กองกำลัง Civil Protection">
+            </div>
+        </div>
+
+        <!-- บทที่ 3 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>สหายเก่าแห่ง Black Mesa</h2>
+                <p>กอร์ดอนเกือบถูกหน่วย Civil Protection จับกุม แต่ได้รับการช่วยเหลือจาก <strong>บาร์นีย์ คาลฮูน (Barney Calhoun)</strong> อดีต รปภ. ของ Black Mesa ที่แฝงตัวเข้าไปเป็นเจ้าหน้าที่ตำรวจ Combine</p>
+                <p>บาร์นีย์พากอร์ดอนไปพบกับ <strong>ดร. ไอแซค ไคลเนอร์ (Dr. Isaac Kleiner)</strong> นักวิทยาศาสตร์สติเฟื่องผู้รอดชีวิต พวกเขาได้มอบ <strong>ชุด HEV Suit Mark V</strong> รุ่นอัปเกรดให้กอร์ดอน เพื่อเตรียมความพร้อมสำหรับการหลบหนีและเข้าร่วมกับฝ่ายต่อต้าน</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/Bar.jpeg" alt="Barney Calhoun">
+                <img src="images/kl.jpeg" alt="Dr. Isaac Kleiner">
+            </div>
+        </div>
+
+        <!-- บทที่ 4 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ฐานทัพลับและการค้นพบ</h2>
+                <p>หลังจากระบบเทเลพอร์ตขัดข้อง กอร์ดอนต้องเดินเท้าฝ่าอันตรายเพื่อไปยังฐานทัพลับ <strong>Black Mesa East</strong> ที่นั่นเขาได้พบกับ <strong>ดร. อีไล แวนซ์ (Eli Vance)</strong> ผู้นำฝ่ายต่อต้าน</p>
+                <p>กอร์ดอนยังได้รับการฝึกใช้อาวุธใหม่สุดล้ำอย่าง <strong>Gravity Gun</strong> โดยการเล่นโยนของกับ <strong>Dog (ด็อก)</strong> หุ่นยนต์ยักษ์ทรงพลังที่อีไลสร้างขึ้นมาเพื่อปกป้องลูกสาวของเขา</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/eil.jpeg" alt="Dr. Eli Vance">
+                <img src="images/Dog.jpeg" alt="หุ่นยนต์ Dog">
+            </div>
+        </div>
+
+        <!-- บทที่ 5 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>การทรยศและเส้นทางสู่ Nova Prospekt</h2>
+                <p>ฐาน Black Mesa East ถูกทหาร Combine บุกโจมตี ดร.อีไล ถูกจับตัวไป กอร์ดอนจึงต้องเดินทางฝ่าเมืองผีดิบ Ravenholm และขับรถบั๊กกี้เลียบชายฝั่ง Highway 17 เพื่อบุกเรือนจำนรก <strong>Nova Prospekt</strong></p>
+                <p>ที่นั่น กอร์ดอนและ <strong>อเล็กซ์ แวนซ์ (Alyx Vance)</strong> ค้นพบความจริงว่า <strong>ดร. จูดิธ มอสแมน</strong> คือสายลับสองหน้าที่หักหลังฝ่ายต่อต้านและทำงานให้กับ ดร.บรีน เธอฉวยโอกาสเทเลพอร์ตพา ดร.อีไล หนีไปยังหอคอย Citadel</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/Alex.jpeg" alt="อเล็กซ์ แวนซ์ (Alyx Vance)">
+                <img src="images/JM.jpeg" alt="Dr. Judith Mossman">
+            </div>
+        </div>
+
+        <!-- บทที่ 6 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>การลุกฮือครั้งยิ่งใหญ่ (The Uprising)</h2>
+                <p>การบุกทำลาย Nova Prospekt ของกอร์ดอนกลายเป็นชนวนเหตุให้ประชาชนใน City 17 ลุกฮือขึ้นจับอาวุธก่อกบฏ เกิดเป็นสงครามกลางเมืองเต็มรูปแบบ กอร์ดอนต้องปะทะกับกองกำลังหลักของ Combine ที่เรียกว่า <strong>Combine Overwatch</strong></p>
+                <p>การต่อสู้ทวีความรุนแรงเมื่อ Combine ส่งอาวุธสงครามขนาดมหึมาอย่าง <strong>Strider (สไตรเดอร์)</strong> หุ่นยนต์สามขายักษ์ออกมาถล่มเมือง กอร์ดอนและเหล่าฝ่ายต่อต้านต้องใช้จรวด RPG ฝ่าดงกระสุนเข้าไปให้ถึงแกนกลางของเมือง</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/combineoverwatch.jpeg" alt="ทหาร Combine Overwatch">
+                <img src="images/strider.jpeg" alt="หุ่นรบยักษ์ Strider">
+            </div>
+        </div>
+
+        <!-- บทที่ 7 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>บุกหอคอย Citadel และบทสรุป</h2>
+                <p>กอร์ดอนลอบเข้าไปใน <strong>Citadel</strong> ป้อมปราการขนาดยักษ์ใจกลางเมือง และเผชิญหน้ากับ ดร.บรีน ที่กำลังจะหลบหนีผ่านพอร์ทัลไปยังโลกของ Combine (โดยมีสัญลักษณ์ <strong>Combine</strong> ปรากฏอยู่ทุกหนแห่ง) กอร์ดอนใช้ Gravity Gun ที่ชาร์จพลังงานเกินพิกัดทำลายเตาปฏิกรณ์ Dark Energy จนเกิดการระเบิดครั้งใหญ่ที่จะกลืนกินยอดหอคอย</p>
+                <p>ในเสี้ยววินาทีก่อนที่แรงระเบิดจะฉีกร่างกอร์ดอนและอเล็กซ์ เวลาทั้งหมดก็หยุดนิ่งลง <strong>G-Man</strong> ก้าวเดินออกมาจากความว่างเปล่า เขากล่าวชมเชยผลงานของกอร์ดอน ก่อนจะพากอร์ดอนกลับเข้าสู่สภาวะหลับไหลอีกครั้ง โดยทิ้งอเล็กซ์ไว้ท่ามกลางแรงระเบิด... <em>(จบภาค 2 เตรียมต่อ Episode One)</em></p>
+            </div>
+            <div class="image-content">
+                <img src="images/combine.jpeg" alt="สัญลักษณ์ของจักรวรรดิ Combine">
+            </div>
+        </div>
+
+        <!-- ปุ่มด้านล่างสุด -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn">กลับสู่หน้าหลัก / เลือกภาคอื่น</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Half-Life Story Archive | ข้อมูลรวบรวมโดยแฟนเกม
+    </footer>
+
+</body>
+</html>

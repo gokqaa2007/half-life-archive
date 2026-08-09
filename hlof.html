@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half-Life: Opposing Force</title>
+    <style>
+        /* สไตล์พื้นฐาน */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121510; /* พื้นหลังสีเข้มอมเขียว */
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* ปุ่มนำทาง (Navigation) */
+        .nav-bar {
+            text-align: center;
+            padding: 15px;
+            background-color: #0b0d0a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            border-bottom: 2px solid #5b7c2b;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #5b7c2b;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #749c36;
+            transform: scale(1.05);
+        }
+
+        /* ส่วนหัวเรื่อง (Header) */
+        header {
+            /* ใช้รูปรวมการต่อสู้เป็นพื้นหลัง */
+            background: linear-gradient(rgba(18, 21, 16, 0.85), rgba(18, 21, 16, 0.95)), url('images/battleop.png') center/cover;
+            color: #749c36;
+            padding: 5rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #5b7c2b;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+        }
+        header p {
+            font-size: 1.3rem;
+            color: #bbb;
+            max-width: 700px;
+            margin: 15px auto 0;
+            font-weight: 300;
+        }
+
+        /* คอนเทนเนอร์เนื้อหา */
+        .container {
+            max-width: 1050px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ส่วนเนื้อเรื่องแต่ละบท */
+        .story-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 5rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #2a3324;
+        }
+        .story-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        .text-content h2 {
+            color: #749c36;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            border-left: 5px solid #5b7c2b;
+            padding-left: 15px;
+        }
+        .text-content p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        /* สไตล์รูปภาพ */
+        .image-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .image-content img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            border: 2px solid #3d4d2e;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .image-content img:hover {
+            transform: translateY(-5px);
+            border-color: #749c36;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .image-grid img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #0b0d0a;
+            text-align: center;
+            padding: 2rem;
+            color: #555;
+            margin-top: 2rem;
+            border-top: 2px solid #5b7c2b;
+        }
+
+        @media (max-width: 800px) {
+            .story-section { flex-direction: column !important; gap: 20px; }
+            .text-content h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="index.html" class="btn">⬅ กลับไปหน้าหลัก</a>
+    </div>
+
+    <header>
+        <h1>Opposing Force</h1>
+        <p>"เราถูกส่งมาเพื่อปิดปากพวกเขา... แต่ตอนนี้เราถูกทิ้งให้ตายเสียเอง" - มุมมองแห่งการเอาชีวิตรอดของหน่วยทหาร HECU</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- บทที่ 1 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ค่ายฝึก Santego และคำสั่งปริศนา</h2>
+                <p>เรื่องราวเริ่มต้นขึ้นเมื่อ <strong>สิบโท เอเดรียน เชพเพิร์ด (Adrian Shephard)</strong> และหน่วยรบพิเศษ <strong>HECU (Hazardous Environment Combat Unit)</strong> กำลังประจำการอยู่ที่ค่ายฝึกทหาร <em>Santego</em> พวกเขาได้รับการฝึกฝนอย่างหนักโดยไม่ทราบเป้าหมายที่แน่ชัด</p>
+                <p>จนกระทั่งมีคำสั่งด่วนเรียกตัวพวกเขาให้ขึ้นเฮลิคอปเตอร์ V-22 Osprey มุ่งหน้าไปยังศูนย์วิจัยลับ <strong>Black Mesa</strong> ภารกิจที่ได้รับคือ "การเข้าควบคุมสถานการณ์และปิดปากพยานทุกคน" รวมถึงนักวิทยาศาสตร์ที่ชื่อ กอร์ดอน ฟรีแมน</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/shephard.png" alt="สิบโท Adrian Shephard">
+                <img src="images/Santego.png" alt="ค่ายทหาร Santego">
+            </div>
+        </div>
+
+        <!-- บทที่ 2 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ภารกิจพลิกผัน: เหยื่อของสงคราม</h2>
+                <p>ก่อนที่เฮลิคอปเตอร์ของหน่วยเชพเพิร์ดจะถึงจุดลงจอด พวกเขาถูกโจมตีโดยยานบินของเอเลี่ยน เครื่องตกกระแทกพื้นอย่างรุนแรง เชพเพิร์ดหมดสติไปและตื่นขึ้นมาในห้องพยาบาลโดยการช่วยเหลือของนักวิทยาศาสตร์ที่เขาถูกสั่งมาให้ฆ่า</p>
+                <p>สถานการณ์พลิกจากหน้ามือเป็นหลังมือ เมื่อพบว่ากองทัพทหารกำลังถูกฝูงเอเลี่ยนจากมิติ Xen ไล่สังหารอย่างโหดเหี้ยม เชพเพิร์ดต้องลุกขึ้นจับอาวุธและร่วมมือกับเพื่อนทหารที่เหลือรอด รวมถึงเหล่านักวิทยาศาสตร์ เพื่อหาทางหนีออกจากขุมนรกนี้</p>
+            </div>
+            <div class="image-content">
+                <img src="images/battleop.png" alt="การต่อสู้ระหว่างทหาร HECU และเอเลี่ยน">
+            </div>
+        </div>
+
+        <!-- บทที่ 3 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ผู้ถูกทอดทิ้ง และศัตรูใหม่ (Black Ops)</h2>
+                <p>เมื่อสถานการณ์เกินจะควบคุม รัฐบาลจึงสั่งถอนกำลังทหารทั้งหมดออกจาก Black Mesa ทว่าเชพเพิร์ดไปไม่ทันจุดถอนตัว เขาถูกทิ้งไว้เบื้องหลังพร้อมกับเพื่อนทหารอีกไม่กี่นาย</p>
+                <p>เคราะห์ซ้ำกรรมซัด รัฐบาลได้ส่งหน่วยปฏิบัติการลับชุดดำ <strong>Black Ops</strong> เข้ามาเพื่อล้างบางทุกสิ่งมีชีวิตใน Black Mesa ไม่เว้นแม้แต่หน่วย HECU ด้วยกันเอง นอกจากนี้เชพเพิร์ดยังต้องเผชิญหน้ากับเอเลี่ยนสายพันธุ์ใหม่ที่เรียกว่า <strong>Race X</strong> ที่ดุร้ายและอันตรายยิ่งกว่าเดิม</p>
+            </div>
+            <div class="image-content image-grid">
+                <!-- ขอยืมรูป G-Man จากคำสั่งก่อนหน้ามาเพิ่มความลึกลับ (G-Man มักจะโผล่มาขัดขวางการหนีของ Shephard) -->
+                <img src="images/G-Man.jpeg" alt="G-Man ชายลึกลับที่คอยจับตาดู Shephard">
+                <img src="images/battleop.png" alt="ความโกลาหลใน Black Mesa">
+            </div>
+        </div>
+
+        <!-- บทที่ 4 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ระเบิดนิวเคลียร์และจุดจบที่ไร้ทางเลี่ยง</h2>
+                <p>เชพเพิร์ดค้นพบว่า Black Ops กำลังนำ <strong>ระเบิดนิวเคลียร์</strong> มาติดตั้งเพื่อทำลายศูนย์วิจัยให้ราบคาบ เขาพยายามอย่างสุดความสามารถในการกู้ระเบิดและต่อสู้กับบอสใหญ่แห่ง Race X (Gene Worm) จนเอาชนะได้สำเร็จ</p>
+                <p>แต่ท้ายที่สุด ชายปริศนา <strong>G-Man</strong> ได้เปิดระบบระเบิดนิวเคลียร์อีกครั้ง เชพเพิร์ดถูกดึงตัวแวบขึ้นมาบนเครื่อง Osprey ที่บินอยู่เหนืออวกาศร่วมกับ G-Man เขาชมเชยความสามารถในการเอาตัวรอดของเชพเพิร์ด ก่อนที่จะจับเชพเพิร์ดขังไว้ใน <strong>สภาวะหลับไหล (Stasis)</strong> แบบเดียวกับที่ทำกับกอร์ดอน... เพื่อรอวันที่จะได้ถูกเรียกใช้งานอีกครั้ง</p>
+            </div>
+            <div class="image-content">
+                <!-- รูป G-Man ตอนจบ -->
+                <img src="images/G-Man.jpeg" alt="G-Man และบทสรุปของ Shephard">
+            </div>
+        </div>
+
+        <!-- ปุ่มด้านล่างสุด -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn">กลับสู่หน้าหลัก / เลือกภาคอื่น</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Half-Life Story Archive | ข้อมูลรวบรวมโดยแฟนเกม
+    </footer>
+
+</body>
+</html>

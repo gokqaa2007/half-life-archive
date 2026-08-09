@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half-Life: Blue Shift</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a; 
+            color: #cbd5e1;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+        .nav-bar {
+            text-align: center;
+            padding: 15px;
+            background-color: #020617;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            border-bottom: 2px solid #3b82f6;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3b82f6; 
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2563eb;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
+        }
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('images/bs2.png') center/cover;
+            color: #60a5fa;
+            padding: 5rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #3b82f6;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+            color: #93c5fd;
+        }
+        header p {
+            font-size: 1.3rem;
+            color: #e2e8f0;
+            max-width: 750px;
+            margin: 15px auto 0;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 1050px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+        .story-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 5rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #1e293b;
+        }
+        .story-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        .text-content h2 {
+            color: #60a5fa;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            border-left: 5px solid #3b82f6;
+            padding-left: 15px;
+        }
+        .text-content p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .image-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .image-content img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            border: 2px solid #334155;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .image-content img:hover {
+            transform: translateY(-5px);
+            border-color: #60a5fa;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .image-grid img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #020617;
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            margin-top: 2rem;
+            border-top: 2px solid #3b82f6;
+        }
+        @media (max-width: 800px) {
+            .story-section { flex-direction: column !important; gap: 20px; }
+            .text-content h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="index.html" class="btn">⬅ กลับไปหน้าหลัก</a>
+    </div>
+
+    <header>
+        <h1>Blue Shift</h1>
+        <p>"เมื่อเวรยามธรรมดา กลายเป็นการเอาชีวิตรอดจากนรกใต้ดิน" - บทสรุปการหลบหนีของ รปภ. แห่ง Black Mesa</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- บทที่ 1 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>เวรยามมรณะและการล่มสลาย</h2>
+                <p>เรื่องราวเริ่มต้นเมื่อ <strong>บาร์นี่ คาลฮูน (Barney Calhoun)</strong> เจ้าหน้าที่รักษาความปลอดภัยระดับล่างของ Black Mesa กำลังปฏิบัติหน้าที่ตามปกติ แต่แล้วการทดลองที่ผิดพลาดของกอร์ดอน ฟรีแมน ก็ได้สร้างปรากฏการณ์ Resonance Cascade ทำให้ศูนย์วิจัยพังพินาศและมีเอเลี่ยนหลุดเข้ามา</p>
+                <p>บาร์นี่รอดชีวิตมาได้อย่างหวุดหวิด เขาต้องช่วยเหลือเหล่านักวิทยาศาสตร์ท่ามกลางความโกลาหล และเริ่มหาหนทางหนีออกจากศูนย์วิจัยที่กำลังจะกลายเป็นสุสานแห่งนี้</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/Barney.png" alt="บาร์นี่ คาลฮูน">
+                <img src="images/bs1.png" alt="รปภ. คุ้มกันนักวิทยาศาสตร์">
+            </div>
+        </div>
+
+        <!-- บทที่ 2 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ตามหา ดร.โรเซนเบิร์ก และสมรภูมิเดือด</h2>
+                <p>บาร์นี่พบความจริงว่ากองกำลังทหาร HECU ไม่ได้มาเพื่อช่วยเหลือ แต่มาเพื่อ "ฆ่าปิดปาก" ทุกคน เขาได้รับเบาะแสว่า <strong>ดร. โรเซนเบิร์ก (Dr. Rosenberg)</strong> เป็นคนเดียวที่มีแผนการหลบหนี</p>
+                <p>ในระหว่างการออกตามหา ดร.โรเซนเบิร์ก บาร์นี่ต้องงัดทักษะการต่อสู้เข้าปะทะกับกองทหาร HECU อย่างดุเดือด ถึงขั้นที่เขาต้องใช้เครื่องยิงจรวด RPG เข้าต่อกรกับรถถังหุ้มเกราะของทหาร จนในที่สุดเขาก็สามารถช่วย ดร.โรเซนเบิร์ก ออกมาจากการถูกจองจำได้สำเร็จ</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/bs3.png" alt="บาร์นี่ยิงจรวดใส่รถถัง">
+                <img src="images/bs5.png" alt="ดร. โรเซนเบิร์ก">
+            </div>
+        </div>
+
+        <!-- บทที่ 3 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ฝ่าดงกระสุนเพื่อเปิดระบบเทเลพอร์ต</h2>
+                <p>ดร.โรเซนเบิร์ก เสนอแผนให้ใช้ <strong>เครื่องเทเลพอร์ตรุ่นต้นแบบ (Prototype)</strong> ที่ถูกทิ้งร้าง แต่ก่อนที่จะทำแบบนั้นได้ บาร์นี่จำเป็นต้องเดินทางลงไปยังส่วนลึกของศูนย์วิจัยเพื่อเปิดสวิตช์พลังงานของระบบ</p>
+                <p>ระหว่างทาง เขาถูกดักซุ่มโจมตีโดยกองกำลังทหารจำนวนมากที่เตรียมการมาเพื่อเด็ดหัวเขาโดยเฉพาะ แต่ด้วยความสามารถและไหวพริบ บาร์นี่สามารถเอาตัวรอดฝ่าดงกระสุนมาได้ และจัดการเปิดเครื่องเทเลพอร์ตให้กลับมามีพลังงานอีกครั้ง</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/bs6.png" alt="บาร์นี่เผชิญหน้ากับทหารที่ดักซุ่มโจมตี">
+                <img src="images/bs7.png" alt="บาร์นี่กำลังเปิดเครื่องเทเลพอร์ต">
+            </div>
+        </div>
+
+        <!-- บทที่ 4 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>บุกเดี่ยวสู่มิติ Xen</h2>
+                <p>แม้เครื่องจะทำงาน แต่ยังขาดพิกัดที่ถูกต้อง บาร์นี่ต้องรับภารกิจเสี่ยงตาย กระโดดผ่านประตูมิติเข้าไปยังโลกต่างดาว <strong>Xen (เซน)</strong> เพียงลำพัง เพื่อปรับแต่งอุปกรณ์ถ่ายทอดสัญญาณ (Focal Point Relay)</p>
+                <p>เขาต้องต่อสู้กับเอเลี่ยนในสภาพแวดล้อมที่ไร้แรงโน้มถ่วง จนสามารถหมุนจานสัญญาณได้สำเร็จ ทำให้ระบบเทเลพอร์ตของ ดร.โรเซนเบิร์ก สามารถล็อกเป้าหมายทางออกไปยังโลกภายนอกได้</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/bs4.png" alt="เครื่องเทเลพอร์ตรุ่น Prototype">
+                <img src="images/bsxen.png" alt="บาร์นี่ในมิติ Xen">
+            </div>
+        </div>
+
+        <!-- บทที่ 5 -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ความผิดพลาดของมิติ และรอยต่อของโชคชะตา</h2>
+                <p>ในขั้นตอนสุดท้ายของการหลบหนี ขณะที่ทหารบุกเข้ามา บาร์นี่ตัดสินใจกระโดดเข้าประตูมิติเป็นคนสุดท้าย ทว่าเกิดความผิดพลาดบางอย่างทำให้เกิด <strong>การดีเลย์และการบิดเบี้ยวของมิติ (Harmonic Reflux)</strong></p>
+                <p>บาร์นี่ถูกเทเลพอร์ตไปโผล่แบบสุ่มตามสถานที่ต่างๆ ใน Black Mesa และในเสี้ยววินาทีหนึ่ง เขาได้เห็นเหตุการณ์สุดช็อก: <strong>กอร์ดอน ฟรีแมน กำลังหมดสติและถูกทหารสองคนลากตัวไปทิ้งที่หลุมบดขยะ</strong> (ซึ่งเป็นเหตุการณ์ในภาคหลัก)</p>
+                <p>ในที่สุดระบบก็ดึงตัวเขากลับมาได้อย่างปลอดภัย บาร์นี่, ดร.โรเซนเบิร์ก และนักวิทยาศาสตร์ นั่งรถจี๊ปหลบหนีออกจากขุมนรกนี้ได้สำเร็จพร้อมๆ กับการสูญเสียของศูนย์วิจัย Black Mesa</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/bs2.png" alt="ประตูมิติทำงาน">
+                <img src="images/bs8.png" alt="บาร์นี่เห็นกอร์ดอนถูกทหารลากไปทิ้ง">
+            </div>
+        </div>
+
+        <!-- ปุ่มด้านล่างสุด -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn">กลับสู่หน้าหลัก / เลือกภาคอื่น</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Half-Life Story Archive | ข้อมูลรวบรวมโดยแฟนเกม
+    </footer>
+
+</body>
+</html>

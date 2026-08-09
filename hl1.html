@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เนื้อเรื่อง Half-Life (1998) - ภาคแรก</title>
+    <style>
+        /* สไตล์พื้นฐาน */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1b1b1b;
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* ส่วนหัวเรื่อง (Header) */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hl.jpeg') center/cover;
+            color: #f39c12;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #f39c12;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #fff;
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+        /* ปุ่มนำทาง (Navigation) */
+        .nav-bar {
+            text-align: center;
+            padding: 15px;
+            background-color: #111;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .btn {
+            display: inline-block;
+            background-color: #f39c12;
+            color: #111;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e67e22;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* คอนเทนเนอร์เนื้อหา */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ส่วนเนื้อเรื่องแต่ละบท */
+        .story-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #333;
+        }
+        .story-section:nth-child(even) {
+            flex-direction: row-reverse; /* สลับซ้ายขวาให้ดูมีมิติ */
+        }
+        
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        .text-content h2 {
+            color: #f39c12;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        /* สไตล์รูปภาพ */
+        .image-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .image-content img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            border: 2px solid #444;
+            transition: transform 0.3s ease;
+        }
+        .image-content img:hover {
+            transform: scale(1.02);
+            border-color: #f39c12;
+        }
+        
+        /* กรณีมี 2 รูปใน section เดียวกัน */
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            margin-top: 2rem;
+            border-top: 2px solid #f39c12;
+        }
+
+        /* รองรับมือถือ */
+        @media (max-width: 768px) {
+            .story-section {
+                flex-direction: column !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- แถบเมนูกลับหน้าหลัก -->
+    <div class="nav-bar">
+        <a href="index.html" class="btn">⬅ กลับไปหน้าหลัก</a>
+    </div>
+
+    <!-- ส่วนหัว (ใช้รูปหน้าปก hl.jpeg เป็นพื้นหลังด้านบน) -->
+    <header>
+        <h1>Half-Life</h1>
+        <p>หายนะแห่งศูนย์วิจัย Black Mesa และจุดเริ่มต้นของตำนาน Gordon Freeman</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- บทที่ 1: จุดเริ่มต้น -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>เช้าวันใหม่ที่ Black Mesa</h2>
+                <p>เรื่องราวเริ่มต้นขึ้นเมื่อ <strong>ดร. กอร์ดอน ฟรีแมน (Gordon Freeman)</strong> นักฟิสิกส์ทฤษฎีวัย 27 ปี เดินทางมาทำงานสายที่ศูนย์วิจัยลับของรัฐบาล <strong>Black Mesa Research Facility</strong> ในรัฐนิวเม็กซิโก เขาได้รับมอบหมายให้เข้าร่วมการทดลองลับสุดยอดในแผนก Anomalous Materials</p>
+                <p>กอร์ดอนทำการสวม <strong>ชุดป้องการวัตถุอันตราย (HEV Suit - Hazardous Environment Suit)</strong> ซึ่งชุดนี้กลายเป็นสัญลักษณ์ประจำตัวของเขาที่จะช่วยให้เขารอดชีวิตจากเหตุการณ์สุดเลวร้ายที่กำลังจะเกิดขึ้น</p>
+            </div>
+            <div class="image-content">
+                <img src="images/HEV_Suit.jpeg" alt="Gordon Freeman ในชุด HEV Suit">
+            </div>
+        </div>
+
+        <!-- บทที่ 2: หายนะ Resonance Cascade -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ความผิดพลาดครั้งใหญ่ (Resonance Cascade)</h2>
+                <p>ในการทดลอง กอร์ดอนต้องผลักตัวอย่างคริสตัลที่ไม่ทราบที่มาเข้าไปในเครื่อง <strong>Anti-Mass Spectrometer</strong> แต่การทดลองเกิดความผิดพลาดอย่างรุนแรงจนนำไปสู่ปรากฏการณ์ที่เรียกว่า <strong>"Resonance Cascade"</strong></p>
+                <p>เตาปฏิกรณ์ระเบิด สร้างรอยแยกของมิติเวลา ทำให้สิ่งมีชีวิตประหลาดจากมิติต่างดาวที่ชื่อว่า <strong>"Xen" (เซ็น)</strong> วาร์ปข้ามมิติเข้ามาในศูนย์วิจัย Black Mesa ทันที ศูนย์วิจัยพังพินาศ และเจ้าหน้าที่จำนวนมากเสียชีวิต</p>
+            </div>
+            <div class="image-content">
+                <img src="images/RC.jpeg" alt="เตาปฏิกรณ์ทดลองและความผิดพลาด Resonance Cascade">
+            </div>
+        </div>
+
+        <!-- บทที่ 3: ภัยคุกคามจากต่างดาว -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ผู้บุกรุกจากมิติ Xen</h2>
+                <p>หลังจากได้สติ กอร์ดอนพบว่าศูนย์วิจัยเต็มไปด้วยเอเลี่ยนอันตราย ศัตรูที่น่ากลัวที่สุดสำหรับเหล่าเจ้าหน้าที่คือ <strong>Headcrab (เฮดแคร็บ)</strong> ปรสิตต่างดาวที่กระโดดเกาะหัวมนุษย์และควบคุมร่างให้กลายเป็นซอมบี้สุดสยอง</p>
+                <p>นอกจากนี้ตามเพดานยังมี <strong>Barnacle (บาร์นาเคิล)</strong> สัตว์ประหลาดที่ห้อยลิ้นยาวลงมาคอยดักจับและกลืนกินผู้ที่เดินผ่านไปมาอย่างไม่ระวัง กอร์ดอนต้องใช้ชะแลงและอาวุธที่หาได้เพื่อเอาชีวิตรอดและหาทางขึ้นสู่ผิวดิน</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/Zb.jpeg" alt="Zombie Headcrab">
+                <img src="images/Bnc.jpeg" alt="Barnacle ห้อยลงมาจากเพดาน">
+            </div>
+        </div>
+
+        <!-- บทที่ 4: การมาถึงของทหาร HECU -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>"เราถูกหักหลัง" - กองกำลัง HECU</h2>
+                <p>เมื่อกอร์ดอนหาทางขึ้นสู่ผิวดินได้สำเร็จ เขาคิดว่าจะได้รับความช่วยเหลือจากกองทัพ แต่รัฐบาลกลับส่งหน่วยรบพิเศษ <strong>HECU (Hazardous Environment Combat Unit)</strong> เข้ามาด้วยภารกิจสุดเหี้ยม: <em>กวาดล้างเอเลี่ยน และ "ฆ่าปิดปาก" บุคลากรของ Black Mesa ทุกคน</em></p>
+                <p>กอร์ดอนจึงตกอยู่ท่ามกลางสงครามสามฝ่าย เขาต้องปะทะกับทั้งกองทัพมนุษย์ต่างดาว และทหาร HECU ที่มีอาวุธครบมือ ความเก่งกาจในการเอาตัวรอดของเขาทำให้ทหาร HECU มองว่าเขาคือเป้าหมายหลักที่ต้องกำจัด</p>
+            </div>
+            <div class="image-content">
+                <img src="images/hecu.jpeg" alt="กองกำลังทหาร HECU">
+            </div>
+        </div>
+
+        <!-- บทที่ 5: การต่อสู้อันดุเดือด -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ฝ่าดงกระสุน</h2>
+                <p>กอร์ดอนต้องบุกตะลุยผ่านเขตต่างๆ ของศูนย์วิจัยที่เต็มไปด้วยการต่อสู้ที่ดุเดือดระหว่างทหารและเอเลี่ยน เขาทำลายยุทโธปกรณ์ของทหารไปมากมายจนกองกำลัง HECU ต้องยอมถอยทัพออกจาก Black Mesa เพราะรับมือกับสถานการณ์ไม่ไหว และตัดสินใจทิ้งระเบิดปูพรมทำลายศูนย์วิจัยแห่งนี้แทน</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/h.jpeg" alt="กอร์ดอนต่อสู้กับทหาร">
+                <img src="images/q.jpeg" alt="ฉากยิงปะทะสุดมันส์">
+            </div>
+        </div>
+
+        <!-- บทที่ 6: ไปสู่มิติ Xen -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>ศูนย์วิจัย Lambda Complex</h2>
+                <p>นักวิทยาศาสตร์ที่เหลือรอดแจ้งกอร์ดอนว่า แม้พวกเขาจะปล่อยจรวดดาวเทียมเพื่อพยายามปิดรอยแยกมิติแล้ว แต่มี "สิ่งมีชีวิตทรงพลัง" ในมิติ Xen คอยดึงรอยแยกนี้ให้เปิดไว้อยู่</p>
+                <p>กอร์ดอนจึงเดินทางลึกลงไปยัง <strong>Lambda Complex</strong> เพื่อใช้เครื่องกำเนิดพอร์ทัลขนาดใหญ่ นักวิทยาศาสตร์ได้เปิดประตูมิติให้กอร์ดอนกระโดดข้ามไปยังโลกของเอเลี่ยน เพื่อทำลายต้นตอของเรื่องราวทั้งหมด</p>
+            </div>
+            <div class="image-content">
+                <img src="images/ld.jpeg" alt="ประตูมิติที่แลป Lambda">
+            </div>
+        </div>
+
+        <!-- บทที่ 7: ดินแดน Xen -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>มิติปริศนา Xen</h2>
+                <p>เมื่อมาถึง <strong>Xen</strong> (เซ็น) ดินแดนชายแดนระหว่างมิติ กอร์ดอนพบกับสภาพแวดล้อมที่แปลกประหลาด แรงโน้มถ่วงต่ำ และหมู่เกาะลอยฟ้า มิตินี้คือแหล่งกบดานและโรงงานสร้างกองทัพของเหล่าเอเลี่ยนที่บุกโลก เขาต้องกระโดดข้ามเกาะลอยฟ้าและบุกทะลวงรังของพวกมัน</p>
+            </div>
+            <div class="image-content image-grid">
+                <img src="images/xen1.jpeg" alt="สภาพแวดล้อมในมิติ Xen">
+                <img src="images/xen2.jpeg" alt="พืชพรรณและสิ่งมีชีวิตใน Xen">
+            </div>
+        </div>
+
+        <!-- บทที่ 8: จุดจบและข้อเสนอ -->
+        <div class="story-section">
+            <div class="text-content">
+                <h2>เผชิญหน้า Nihilanth</h2>
+                <p>ในท้ายที่สุด กอร์ดอนได้เผชิญหน้ากับบอสใหญ่ <strong>Nihilanth (ไนฮิลานธ์)</strong> สิ่งมีชีวิตขนาดยักษ์ที่เป็นผู้ควบคุมรอยแยกมิติและบงการกองทัพเอเลี่ยน หลังจากการต่อสู้อย่างยากลำบาก กอร์ดอนสามารถปลิดชีพ Nihilanth ได้สำเร็จ</p>
+                <p>เมื่อ Nihilanth ตาย กอร์ดอนถูกดึงตัวออกมาโดย <strong>G-Man</strong> ชายลึกลับใส่สูทถือกระเป๋าเอกสารที่จับตาดูเขามาตลอด G-Man ประทับใจในผลงานของกอร์ดอน และยื่น "ข้อเสนอ" ให้กอร์ดอนทำงานให้กับเขา กอร์ดอนตอบตกลง และถูกจับให้เข้าสู่สภาวะหลับไหล (Stasis) เพื่อรอวันที่จะถูกปลุกขึ้นมาใช้งานอีกครั้ง... <em>(จบภาค 1)</em></p>
+            </div>
+            <div class="image-content">
+                <img src="images/nihilanth.jpeg" alt="บอสใหญ่ Nihilanth">
+            </div>
+        </div>
+
+        <!-- ปุ่มด้านล่างสุด -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn">กลับสู่หน้าหลัก / เลือกภาคอื่น</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Half-Life Story Archive | ข้อมูลรวบรวมโดยแฟนเกม
+    </footer>
+
+</body>
+</html>

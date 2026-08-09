@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half-Life 2: Episode Two</title>
+    <style>
+        /* สไตล์พื้นฐาน โทนสีเข้มผสมสีเขียวของป่า White Forest */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111812;
+            color: #d4d9de;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .nav-bar {
+            text-align: center;
+            padding: 15px;
+            background-color: #0a0d0a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            border-bottom: 2px solid #4CAF50;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ff9900;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e68a00;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.5);
+        }
+
+        /* ส่วนหัวเรื่อง (Header) */
+        header {
+            /* รูปพายุซูเปอร์พอร์ทัล */
+            background: linear-gradient(rgba(17, 24, 18, 0.85), rgba(17, 24, 18, 0.95)), url('images/4712190.jpg') center/cover;
+            color: #ff9900;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #4CAF50;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #b0c4de;
+            max-width: 800px;
+            margin: 15px auto 0;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* สไตล์เนื้อเรื่องแต่ละบท */
+        .chapter-box {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: #1a241a;
+            border-radius: 10px;
+            margin-bottom: 2.5rem;
+            border-left: 5px solid #4CAF50;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .chapter-box:hover {
+            transform: translateY(-5px);
+            border-color: #ff9900;
+        }
+        
+        .chapter-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .chapter-image img {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #2d402d;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+            background-color: #333;
+        }
+        .chapter-text {
+            flex: 2;
+            min-width: 300px;
+            padding: 20px 30px;
+        }
+        .chapter-text h2 {
+            color: #4CAF50;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #2d402d;
+            padding-bottom: 10px;
+        }
+        .chapter-text p {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #0a0d0a;
+            text-align: center;
+            padding: 2rem;
+            color: #667788;
+            margin-top: 3rem;
+            border-top: 2px solid #4CAF50;
+        }
+
+        @media (max-width: 800px) {
+            .chapter-box { flex-direction: column; }
+            .chapter-text { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="index.html" class="btn">⬅ กลับไปหน้าหลัก</a>
+    </div>
+
+    <header>
+        <h1>Half-Life 2: Episode Two</h1>
+        <p>การเดินทางฝ่าความตายในป่าลึก กอร์ดอนและอเล็กซ์ต้องนำข้อมูลสำคัญไปส่งที่ฐานทัพ White Forest ก่อนที่กองทัพ Combine จะเรียกกำลังเสริมผ่านซูเปอร์พอร์ทัลมาทำลายล้างมนุษยชาติจนสิ้นซาก</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- บทที่ 1: สู่ป่าสีขาว -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- รูป Vortigaunt อุ้มอเล็กซ์ -->
+                <img src="images/4696798.jpg" alt="การช่วยเหลืออเล็กซ์">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 1: สู่ป่าสีขาว (To the White Forest)</h2>
+                <p>กอร์ดอนฟื้นขึ้นมาหลังรถไฟตกราง ทั้งคู่รอดชีวิตและเดินทางมุ่งหน้าไปยังฐานต่อต้าน "White Forest" แต่เคราะห์ร้าย อเล็กซ์ถูกโจมตีโดย "Hunter" ของกองทัพ Combine จนบาดเจ็บสาหัส โชคดีที่ Vortigaunt ปรากฏตัวขึ้นมาช่วยเหลือและอุ้มร่างของเธอไปหลบภัยชั่วคราว</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 2: ลงสู่เหมือง -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- รูปลงปล่องลิฟต์เหมือง -->
+                <img src="images/4696801.jpg" alt="เหมือง Victory Mine">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 2: วงวนแห่งวอร์ต (This Vortal Coil) - สู่ใต้ดิน</h2>
+                <p>เพื่อหาทางยื้อชีวิตอเล็กซ์ กอร์ดอนต้องแยกทางลงไปในปล่องลิฟต์ของเหมือง Victory Mine อันลึกลับและมืดมิด เพื่อหาทางบุกทะลวงลงไปยังรังของมดนรก (Antlion) ที่ซ่อนอยู่ลึกลงไปใต้ดิน</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 2: รังมดนรก -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- รูปสารสกัดเรืองแสงในรังมดนรก -->
+                <img src="images/4696804.jpg" alt="สารสกัดจากตัวอ่อนมดนรก">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 2: วงวนแห่งวอร์ต (This Vortal Coil) - สารสกัดจากตัวอ่อน</h2>
+                <p>ภายในโถงถ้ำที่เต็มไปด้วยอันตราย กอร์ดอนต้องปะทะกับฝูงมดนรกและพิทักษ์รัง (Antlion Guardian) จนในที่สุดเขาก็ตามหาสารสกัดจากตัวอ่อน (Larval Extract) ที่ส่องแสงเรืองรองอยู่ในรังได้สำเร็จ ซึ่งเป็นส่วนประกอบสำคัญในการรักษา</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 2: พิธีกรรมรักษา -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- รูป Vortigaunts รุมล้อมเตียงรักษาอเล็กซ์ -->
+                <img src="images/4696805.jpg" alt="พิธีกรรมการรักษา">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 2: วงวนแห่งวอร์ต (This Vortal Coil) - พิธีกรรมยื้อชีวิต</h2>
+                <p>เมื่อนำสารสกัดกลับมาได้ เหล่า Vortigaunts ได้รวมพลังกันล้อมรอบเตียงผ่าตัดสนาม พวกเขาประกอบพิธีกรรมลี้ลับโดยใช้พลังวอร์ต (Vortal Energy) ผสานเข้ากับสารสกัด เพื่อสมานบาดแผลและดึงจิตวิญญาณของอเล็กซ์กลับมาจากความตาย</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 2: ข้อความจาก G-Man -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- รูป G-Man บนหน้าจอ -->
+                <img src="images/4696807.jpg" alt="สาส์นจาก G-Man">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 2: วงวนแห่งวอร์ต (This Vortal Coil) - สาส์นลับจาก G-Man</h2>
+                <p>ในจังหวะที่พิธีกรรมกำลังดำเนินไป เวลาได้หยุดนิ่งลงและ G-Man ก็ปรากฏตัวขึ้น เขาได้สนทนากับกอร์ดอนและฝากข้อความลับเข้าไปในจิตใต้สำนึกของอเล็กซ์ ให้เธอนำไปบอก อีไล แวนซ์ ผู้เป็นพ่อ ด้วยคำพูดปริศนาว่า <strong>"เตรียมรับมือกับผลลัพธ์ที่คาดไม่ถึง" (Prepare for unforeseen consequences)</strong></p>
+            </div>
+        </div>
+
+        <!-- บทที่ 3: สะพาน -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- รูปวิวมองเห็นสะพานและขบวนรถ Combine -->
+                <img src="images/4696814.jpg" alt="สะพานสู่ความหวัง">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 3: สะพานสู่ความหวัง (Freeman Pontifex)</h2>
+                <p>กอร์ดอนและอเล็กซ์ (ที่ฟื้นตัวแล้ว) เดินทางขึ้นมาสู่พื้นผิว พวกเขามองเห็นกองทัพ Combine บนสะพานกำลังมุ่งหน้าไปทางเดียวกัน กอร์ดอนต้องลุยเดี่ยวข้ามฝ่าพื้นที่ที่มีสารกัมมันตรังสีและฝูงซอมบี้ข้ามสะพานไป เพื่อนำรถยนต์ที่ฝ่ายต่อต้านทิ้งไว้มาใช้งาน</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 4 (ใช้รูปจำลองไปก่อน) -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- ใส่ชื่อไฟล์ชั่วคราวไว้ก่อน คุณสามารถแก้เป็นชื่อไฟล์จริงทีหลังได้ -->
+                <img src="images/ep2_ch4.jpg" alt="ซิ่งฝ่าดงกระสุน">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 4: ซิ่งฝ่าดงกระสุน (Riding Shotgun)</h2>
+                <p>ด้วยรถยนต์คันใหม่ ทั้งคู่ขับซิ่งฝ่าป่าและดงศัตรู พวกเขาต้องปะทะกับ Hunter-Chopper ที่ไล่ล่าอย่างไม่ลดละจนสามารถทำลายมันได้สำเร็จ ระหว่างทางพวกเขาบังเอิญไปพบกับ "Advisor" ที่กำลังฟักตัวอยู่ในโกดัง ทั้งคู่เกือบเอาชีวิตไม่รอดแต่ก็หนีออกมาได้ทัน</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 5: ฐาน White Forest -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- รูปทางเข้าฐาน White Forest (มี Autogun ด้านหน้า) -->
+                <img src="images/4696817.jpg" alt="ทางเข้าฐานทัพ White Forest">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 5: หลบเร้นใต้เรดาร์ (Under the Radar) - ถึงเป้าหมาย</h2>
+                <p>หลังจากซิ่งรถฝ่าดงศัตรูและซุ่มโจมตี ในที่สุดกอร์ดอนและอเล็กซ์ก็เดินทางมาถึงฐานทัพคลังจรวดเก่าแก่ White Forest ของกลุ่มต่อต้านอย่างปลอดภัย และได้นำข้อมูลล้ำค่าไปมอบให้ อีไล, ดร.ไคลเนอร์ และ ดร.แมกนัสสัน</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 6: ปกป้องไซโล -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- รูปกอร์ดอนมองขึ้นไปบนปล่องไซโลจรวดที่มีไฟลุก -->
+                <img src="images/4696821.jpg" alt="การป้องกันไซโล">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 6: ศัตรูร่วมของเรา (Our Mutual Fiend) - ปกป้องไซโล</h2>
+                <p>กองทัพ Combine บุกเจาะเข้ามาถึงหลังคาไซโลจรวด กอร์ดอนต้องรับมือกับการบุกรุกจากด้านใน เพื่อป้องกันไม่ให้ศัตรูลงมาทำลายจรวดได้ ก่อนที่จะต้องออกไปขับรถไล่ล่าทำลายหุ่นรบ Strider ที่ยกทัพมาอย่างหนักหน่วงด้านนอกฐานทัพ</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 7: ตอนจบ -->
+        <div class="chapter-box" style="border-left-color: #ff3333;">
+            <div class="chapter-image">
+                <!-- รูปอเล็กซ์กอดศพอีไล -->
+                <img src="images/4696824.jpg" alt="โศกนาฏกรรมตอนจบ">
+            </div>
+            <div class="chapter-text">
+                <h2 style="color: #ff3333;">บทที่ 7: นับถอยหลัง (T-Minus One) - โศกนาฏกรรม</h2>
+                <p>จรวดถูกปล่อยขึ้นไปปิดซูเปอร์พอร์ทัลได้สำเร็จ แต่ขณะที่พวกเขากำลังเตรียมตัวขึ้นเฮลิคอปเตอร์เพื่อออกเดินทางตามหาเรือ Borealis ศัตรูระดับผู้นำอย่าง Combine Advisor ได้พังกำแพงเข้ามาจับตัวพวกเขาทั้งหมดไว้ และดูดสมองสังหาร อีไล แวนซ์ อย่างโหดเหี้ยมต่อหน้าต่อตา เกมจบลงด้วยภาพอันสะเทือนใจเมื่ออเล็กซ์กอดศพพ่อของเธอและร่ำไห้อย่างเจ็บปวด...</p>
+            </div>
+        </div>
+
+        <!-- ปุ่มกลับหน้าหลัก -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn">กลับสู่หน้าหลัก / เลือกภาคอื่น</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Half-Life Story Archive | ข้อมูลและรูปภาพรวบรวมโดยแฟนเกม
+    </footer>
+
+</body>
+</html>

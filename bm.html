@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Mesa - History & Differences</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            border-bottom: 4px solid #ff6600;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        h1 {
+            color: #ff6600;
+            margin: 0;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header p {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .section-box {
+            background-color: #262626;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 10px;
+            border-top: 4px solid #ff6600;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+        }
+        .section-box h2 {
+            color: #ffb84d;
+            border-bottom: 1px solid #444;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        .info-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        ul {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d1d1d1;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        .highlight {
+            color: #ff9933;
+            font-weight: bold;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #444;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        }
+        .img-large { width: 100%; }
+        .img-half { width: calc(50% - 10px); }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff6600;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background-color: #ff8533;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            background-color: #000;
+            border-top: 1px solid #333;
+        }
+        @media (max-width: 768px) {
+            .img-half { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- รูปหน้าปก Black Mesa ที่คุณส่งมา -->
+        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/362890/c06bc3afe2c10bb77bfb8d41198101b8a3990fd7/capsule_616x353.jpg" alt="Black Mesa Steam Capsule" style="max-width: 400px; width: 100%; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+        <h1>Black Mesa</h1>
+        <p>จากโปรเจกต์ม็อดของแฟนเกม สู่การรีเมคที่ได้รับการยอมรับอย่างเป็นทางการ</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- รูปภาพเปิดแนวคิด -->
+        <div class="image-gallery">
+            <img class="img-large" src="https://media.wired.com/photos/5e5ff5100f6c98000810ccc9/3:2/w_2560%2cc_limit/Cul-blackmesa-13.jpg" alt="Black Mesa Concept">
+        </div>
+
+        <!-- Section 1: ความเป็นมา -->
+        <div class="section-box">
+            <h2>ภาคภูมิใจแห่งการสร้างสรรค์: ความเป็นมา (History & Origins)</h2>
+            <p class="info-text">
+                จุดเริ่มต้นของ <strong>Black Mesa</strong> เกิดขึ้นจากความผิดหวัง ในปี 2004 ทาง Valve ได้วางจำหน่าย <em>Half-Life: Source</em> ซึ่งเป็นการพอร์ตเกมภาคแรกไปใช้เอนจินใหม่ แต่ผลลัพธ์ที่ได้กลับเป็นเพียงเกมเดิมที่มีระบบฟิสิกส์เพิ่มขึ้นเล็กน้อย กราฟิกและโมเดลต่างๆ แทบจะเหมือนเดิมทุกประการ ทำให้แฟนเกมรู้สึกว่ามันไม่ได้ดึงศักยภาพของ Source Engine ออกมาอย่างที่ควรจะเป็น
+            </p>
+            <p class="info-text">
+                ด้วยเหตุนี้ กลุ่มแฟนเกมอิสระสองทีม (Leakfree และ Half-Life: Source Overhaul Project) จึงได้ตัดสินใจรวมตัวกันในชื่อทีม <span class="highlight">Crowbar Collective</span> เพื่อสร้างโปรเจกต์รีเมคเกมภาคแรกขึ้นมาใหม่ทั้งหมดด้วยตัวเองตั้งแต่ศูนย์ การพัฒนาใช้เวลาอย่างยาวนานนับสิบปี โดยปล่อยเวอร์ชันฟรีให้เล่นครั้งแรกในปี 2012 (ซึ่งตอนนั้นยังขาดเนื้อเรื่องช่วงมิติ Xen)
+            </p>
+            <p class="info-text">
+                ความทุ่มเทและคุณภาพของโปรเจกต์นี้ไปเตะตา Valve อย่างจัง Valve ไม่เพียงแต่ไม่ฟ้องร้องเรื่องลิขสิทธิ์ แต่กลับไฟเขียวและให้สิทธิ์ Crowbar Collective นำเกมนี้ไปวางขายบน Steam ในฐานะเกมเชิงพาณิชย์ได้อย่างเป็นทางการ จนในที่สุดตัวเกมเวอร์ชันสมบูรณ์ (1.0) ที่มีมิติ Xen แบบเต็มรูปแบบ ก็ได้วางจำหน่ายในปี 2020 ปิดตำนานการพัฒนามาราธอนกว่า 15 ปีอย่างสวยงาม
+            </p>
+        </div>
+
+        <!-- รูปภาพคั่นบรรยากาศในเกม -->
+        <div class="image-gallery">
+            <img class="img-half" src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/19785165/ss_0b3c1d1ebdc7367d8e76d22c82ce58063bbff457.jpg" alt="Gameplay 1">
+            <img class="img-half" src="https://kotaku.com/app/uploads/2025/05/e427bcc7b852c4d5d580855b7015308c.jpg" alt="Gameplay 2">
+        </div>
+
+        <!-- Section 2: ความแตกต่าง -->
+        <div class="section-box">
+            <h2>การยกระดับตำนาน: ความแตกต่างจากต้นฉบับ (Key Differences)</h2>
+            <p class="info-text">
+                Black Mesa ไม่ใช่แค่การนำเนื้อหาเดิมมาทำกราฟิกใหม่ (Remaster) แต่มันคือการ <span class="highlight">Re-imagine (ตีความใหม่)</span> ในหลายๆ องค์ประกอบ นี่คือความแตกต่างหลักๆ ระหว่างเวอร์ชันต้นฉบับปี 1998 กับ Black Mesa:
+            </p>
+            <ul>
+                <li><strong>กราฟิกและสภาพแวดล้อม:</strong> ถูกสร้างขึ้นใหม่ทั้งหมดบน Source Engine อัปเดตล่าสุด มีระบบแสงเงาแบบไดนามิก เท็กซ์เจอร์ความละเอียดสูง และดีไซน์ศูนย์วิจัยที่ดูสมจริง ซับซ้อน และมีชีวิตชีวามากขึ้น</li>
+                <li><strong>การออกแบบด่าน (Level Design):</strong> ไม่ได้ลอกแบบแผนที่มาแบบ 1:1 หลายๆ ด่านถูกขยายให้กว้างขึ้น ปรับปรุงเส้นทางให้สมเหตุสมผล แก้ไขปริศนา (Puzzle) ที่น่ารำคาญในภาคแรกให้สนุกและใช้ระบบฟิสิกส์เข้ามาช่วยแก้ปัญหามากขึ้น</li>
+                <li><strong>มิติ Xen ที่ถูกยกเครื่องใหม่หมด:</strong> นี่คือความเปลี่ยนแปลงที่ยิ่งใหญ่ที่สุด! ในต้นฉบับ มิติ Xen ถูกวิจารณ์ว่าสั้นและน่าเบื่อ แต่ใน Black Mesa ทีมงานได้สร้างโลก Xen ขึ้นมาใหม่ทั้งหมด เพิ่มความอลังการของสภาพแวดล้อมต่างดาว ขยายความยาวของด่านจากไม่กี่นาทีกลายเป็นหลายชั่วโมง พร้อมระบบนิเวศที่เป็นเอกลักษณ์</li>
+                <li><strong>ปัญญาประดิษฐ์ (AI) และการต่อสู้:</strong> ทหาร HECU (ฝั่งมนุษย์) มีความฉลาดขึ้น รู้จักตีวงล้อม โยนระเบิด และหาที่กำบัง ส่วนเหล่าเอเลี่ยนก็มีการเคลื่อนไหวและการโจมตีที่น่ากลัวและท้าทายกว่าเดิม</li>
+                <li><strong>เสียงพากย์และดนตรีประกอบ:</strong> มีการบันทึกเสียงพากย์ตัวละครใหม่ทั้งหมดโดยนักพากย์สมัครเล่นที่พยายามรักษาอารมณ์เดิมไว้ นอกจากนี้ยังมี <span class="highlight">Original Soundtrack ใหม่แกะกล่อง</span> ประพันธ์โดย Joel Nielsen ซึ่งทำดนตรีออกมาได้ทั้งระทึกขวัญและอลังการเข้ากับบรรยากาศเกมสุดๆ</li>
+            </ul>
+
+            <!-- ใส่รูปมิติ Xen ที่คุณเพิ่งส่งมาตรงนี้ -->
+            <div style="margin-top: 25px; text-align: center;">
+                <p style="color: #ffb84d; font-weight: bold; margin-bottom: 10px;">บรรยากาศสุดอลังการของ "มิติ Xen" ฉบับตีความใหม่ใน Black Mesa</p>
+                <img class="img-large" src="https://assetsio.gnwcdn.com/black-mesa-xen-a.jpg?width=690&quality=85&format=jpg&dpr=3&auto=webp" alt="Xen Dimension Black Mesa">
+            </div>
+        </div>
+
+        <!-- รูปภาพคั่นเพิ่มเติม -->
+        <div class="image-gallery">
+            <img class="img-half" src="https://media.moddb.com/images/articles/1/344/343003/auto/1767267425358B1DHBkB.jpg" alt="HECU Soldiers">
+            <img class="img-half" src="http://gamingpastime.com/wp-content/uploads/2023/04/blackmesa1.jpg" alt="Environment">
+        </div>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="index.html" class="btn">กลับสู่หน้าหลักสารบัญ (Main Hub)</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Half-Life Story Archive | ข้อมูลประวัติการพัฒนา Black Mesa (Crowbar Collective)
+    </footer>
+
+</body>
+</html>

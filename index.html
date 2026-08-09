@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สรุปเนื้อเรื่อง Half-Life ทุกภาค - หน้าหลัก</title>
+    <style>
+        /* ตั้งค่าสไตล์พื้นฐาน */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #151515;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* ส่วนหัวของเว็บไซต์ */
+        header {
+            background-color: #f39c12;
+            color: #111;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            margin-bottom: 2rem;
+            border-bottom: 5px solid #d68910;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* คอนเทนเนอร์หลัก */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* สไตล์ของการ์ดแต่ละภาค */
+        .game-card {
+            display: flex;
+            background-color: #252525;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            /* กำหนดความสูงขั้นต่ำให้การ์ด เพื่อให้รูปภาพมีพื้นที่แสดงผลเท่าๆ กัน */
+            min-height: 200px;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #f39c12;
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+        }
+
+        /* ส่วนกล่องรูปภาพหน้าปก */
+        .game-image {
+            width: 320px; /* ล็อกความกว้างของรูปให้เท่ากันทุกการ์ด */
+            flex-shrink: 0;
+            background-color: #000;
+            position: relative;
+        }
+        
+        /* สไตล์จัดการรูปภาพ */
+        .game-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ทำให้รูปเต็มกล่องพอดีโดยไม่เสียสัดส่วน */
+            object-position: center; 
+            display: block;
+        }
+
+        /* ส่วนเนื้อหาในหน้าการ์ด */
+        .game-info {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .game-info h2 {
+            margin: 0 0 10px 0;
+            color: #f39c12;
+            font-size: 1.8rem;
+        }
+        .game-info p {
+            color: #ccc;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        /* ปุ่มอ่านเนื้อเรื่อง */
+        .btn {
+            align-self: flex-start;
+            background-color: #f39c12;
+            color: #111;
+            text-decoration: none;
+            padding: 10px 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e67e22;
+            color: #fff;
+        }
+
+        /* ส่วนท้าย */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            margin-top: 3rem;
+            background-color: #0a0a0a;
+            border-top: 1px solid #222;
+        }
+
+        /* การ์ดพิเศษ Half-Life 3 (ทีเซอร์ลึกลับ) */
+        .game-card.teaser {
+            border: 2px dashed #e74c3c;
+        }
+        .game-card.teaser .game-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+        }
+        .game-card.teaser .game-image span {
+            font-size: 3rem;
+            color: #555;
+        }
+        .game-card.teaser .game-info h2 {
+            color: #e74c3c;
+        }
+        .game-card.teaser .btn {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+        .game-card.teaser .btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* สำหรับหน้าจอมือถือ (จอเล็ก) */
+        @media (max-width: 700px) {
+            .game-card {
+                flex-direction: column;
+            }
+            .game-image {
+                width: 100%;
+                height: 220px;
+            }
+            .game-image img {
+                position: relative;
+            }
+            .btn {
+                align-self: stretch;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>จักรวาล Half-Life</h1>
+        <p>บันทึกเหตุการณ์และเนื้อเรื่องของเกมระดับตำนาน</p>
+    </header>
+
+    <div class="container">
+
+        <div class="game-card">
+            <div class="game-image">
+                <img src="images/hl.jpeg" alt="หน้าปก Half-Life 1">
+            </div>
+            <div class="game-info">
+                <h2>Half-Life</h2>
+                <p>จุดเริ่มต้นของหายนะแห่งศูนย์วิจัย Black Mesa และการต่อสู้ครั้งแรกของ ดร.กอร์ดอน ฟรีแมน</p>
+                <a href="hl1.html" class="btn">อ่านเนื้อเรื่อง</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image">
+                <img src="images/hlopf.jpeg" alt="หน้าปก Half-Life: Opposing Force">
+            </div>
+            <div class="game-info">
+                <h2>Half-Life: Opposing Force</h2>
+                <p>มุมมองจากสิบโท Adrian Shephard แห่งกองกำลัง HECU ที่ถูกส่งมาล้างบาง Black Mesa</p>
+                <a href="hlof.html" class="btn">อ่านเนื้อเรื่อง</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image">
+                <img src="images/hlbs.jpeg" alt="หน้าปก Half-Life: Blue Shift">
+            </div>
+            <div class="game-info">
+                <h2>Half-Life: Blue Shift</h2>
+                <p>เอาชีวิตรอดผ่านสายตาของ Barney Calhoun เจ้าหน้าที่รักษาความปลอดภัยของศูนย์วิจัย</p>
+                <a href="hlbs.html" class="btn">อ่านเนื้อเรื่อง</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image">
+                <img src="images/dc.jpeg" alt="หน้าปก Half-Life: Decay">
+            </div>
+            <div class="game-info">
+                <h2>Half-Life: Decay</h2>
+                <p>เรื่องราวของ ดร.จินา ครอส และ ดร.โคเลตต์ กรีน สองนักวิทยาศาสตร์หญิงผู้ทำหน้าที่หลังฉาก</p>
+                <a href="hldc.html" class="btn">อ่านเนื้อเรื่อง</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image">
+                <img src="images/Hl2.jpeg" alt="หน้าปก Half-Life 2">
+            </div>
+            <div class="game-info">
+                <h2>Half-Life 2</h2>
+                <p>การตื่นขึ้นมาใน City 17 และการลุกฮือของมนุษยชาติเพื่อต่อต้านเผ่าพันธุ์ต่างดาว Combine</p>
+                <a href="hl2.html" class="btn">อ่านเนื้อเรื่อง</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image">
+                <img src="images/hl2ep1.jpeg" alt="หน้าปก Half-Life 2: Episode One">
+            </div>
+            <div class="game-info">
+                <h2>Half-Life 2: Episode One</h2>
+                <p>การหลบหนีออกจาก City 17 ที่กำลังจะพังทลายของกอร์ดอนและอเล็กซ์</p>
+                <a href="hl2ep1.html" class="btn">อ่านเนื้อเรื่อง</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image">
+                <img src="images/hl2ep2.jpeg" alt="หน้าปก Half-Life 2: Episode Two">
+            </div>
+            <div class="game-info">
+                <h2>Half-Life 2: Episode Two</h2>
+                <p>การเดินทางฝ่าสมรภูมิป่าเขาเพื่อนำข้อมูลสำคัญไปส่งให้ฐานทัพฝ่ายต่อต้านที่ White Forest</p>
+                <a href="hl2ep2.html" class="btn">อ่านเนื้อเรื่อง</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image">
+                <img src="images/hla.jpeg" alt="หน้าปก Half-Life: Alyx">
+            </div>
+            <div class="game-info">
+                <h2>Half-Life: Alyx</h2>
+                <p>เหตุการณ์ก่อนภาค 2 การต่อสู้อย่างลับๆ ของ Alyx Vance และพ่อของเธอเพื่อความอยู่รอด</p>
+                <a href="hla.html" class="btn">อ่านเนื้อเรื่อง</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-image">
+                <img src="images/bm.jpeg" alt="หน้าปก Black Mesa">
+            </div>
+            <div class="game-info">
+                <h2>Black Mesa</h2>
+                <p>โปรเจกต์ Remake สุดยิ่งใหญ่ที่ชุบชีวิตเกมต้นฉบับให้กลับมาสวยงามและสมบูรณ์แบบยิ่งขึ้น</p>
+                <a href="bm.html" class="btn">อ่านเนื้อเรื่อง</a>
+            </div>
+        </div>
+
+        <div class="game-card teaser">
+            <div class="game-image">
+                <span>?</span>
+            </div>
+            <div class="game-info">
+                <h2>Half-Life 3</h2>
+                <p>บทสรุปแห่งตำนานที่แฟนเกมรอคอยมากที่สุดในประวัติศาสตร์ (ลองกดดูสิ...)</p>
+                <a href="hl3.html" class="btn" style="background-color: #e74c3c; color: white;">ค้นหาความจริง</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Half-Life Story Archive
+    </footer>
+
+</body>
+</html>

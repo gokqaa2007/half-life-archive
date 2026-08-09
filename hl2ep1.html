@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half-Life 2: Episode One</title>
+    <style>
+        /* สไตล์พื้นฐาน โทนสีเข้มผสมบรรยากาศ City 17 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121417; /* ดำอมน้ำเงินเข้ม */
+            color: #d4d9de;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .nav-bar {
+            text-align: center;
+            padding: 15px;
+            background-color: #090a0c;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            border-bottom: 2px solid #00aaff; /* สีฟ้า Combine */
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ff9900; /* สีส้ม HEV */
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e68a00;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.5);
+        }
+
+        /* ส่วนหัวเรื่อง (Header) */
+        header {
+            /* แก้ไข path รูปตรงนี้ */
+            background: linear-gradient(rgba(18, 20, 23, 0.85), rgba(18, 20, 23, 0.95)), url('images/4677891.png') center/cover;
+            color: #ff9900;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #00aaff;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #b0c4de;
+            max-width: 800px;
+            margin: 15px auto 0;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* สไตล์เนื้อเรื่องแต่ละบท */
+        .chapter-box {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: #1a1e24;
+            border-radius: 10px;
+            margin-bottom: 2.5rem;
+            border-left: 5px solid #00aaff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .chapter-box:hover {
+            transform: translateY(-5px);
+            border-color: #ff9900;
+        }
+        
+        .chapter-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .chapter-image img {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #2c3540;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+        }
+        .chapter-text {
+            flex: 2;
+            min-width: 300px;
+            padding: 20px 30px;
+        }
+        .chapter-text h2 {
+            color: #00aaff;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #2c3540;
+            padding-bottom: 10px;
+        }
+        .chapter-text p {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #090a0c;
+            text-align: center;
+            padding: 2rem;
+            color: #667788;
+            margin-top: 3rem;
+            border-top: 2px solid #00aaff;
+        }
+
+        @media (max-width: 800px) {
+            .chapter-box { flex-direction: column; }
+            .chapter-text { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="index.html" class="btn">⬅ กลับไปหน้าหลัก</a>
+    </div>
+
+    <header>
+        <h1>Half-Life 2: Episode One</h1>
+        <p>ผลพวงจากการระเบิดของเตาปฏิกรณ์ Dark Energy กอร์ดอนและอเล็กซ์ได้รับการช่วยเหลือจากเหล่า Vortigaunts พวกเขาต้องหาทางถ่วงเวลาไม่ให้ Citadel ระเบิด เพื่ออพยพผู้คนออกจาก City 17 ให้ทันเวลา</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- บทนำ -->
+        <div class="chapter-box" style="border-left-color: #ff9900;">
+            <div class="chapter-image">
+                <!-- เพิ่ม images/ นำหน้าชื่อไฟล์แล้ว -->
+                <img src="images/4677891.png" alt="การแทรกแซงของ Vortigaunts">
+            </div>
+            <div class="chapter-text">
+                <h2 style="color: #ff9900;">บทนำ: พ้นเงื้อมมือ G-Man</h2>
+                <p>สืบเนื่องจากตอนจบของ Half-Life 2 ในเสี้ยววินาทีที่เตาปฏิกรณ์บนยอดหอคอย Citadel กำลังจะระเบิดและ G-Man ปรากฏตัวขึ้น เหล่า Vortigaunts ได้ใช้พลังของพวกเขาร่วมกันแทรกแซงมิติเวลา ดึงตัวอเล็กซ์ แวนซ์ (Alyx Vance) ให้พ้นจากอันตราย และปลดปล่อยกอร์ดอน ฟรีแมน ออกจากการควบคุมของ G-Man ได้สำเร็จ</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 1: สัญญาณเตือนภัย -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- เพิ่ม images/ นำหน้าชื่อไฟล์แล้ว -->
+                <img src="images/4677885.jpg" alt="ด็อกช่วยกอร์ดอน">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 1: สัญญาณเตือนภัย (Undue Alarm) - การช่วยเหลือ</h2>
+                <p>กอร์ดอนฟื้นขึ้นมาใต้ซากปรักหักพังบริเวณฐานของหอคอย Citadel หุ่นยนต์สัตว์เลี้ยงแสนรู้ "ด็อก" (Dog) ได้ดึงตัวกอร์ดอนออกมาจากซากหินและให้เขากลับมาพบกับอเล็กซ์อีกครั้ง ทั้งสองคนรอดชีวิตมาได้อย่างปาฏิหาริย์</p>
+            </div>
+        </div>
+
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- เพิ่ม images/ นำหน้าชื่อไฟล์แล้ว -->
+                <img src="images/4677886.jpg" alt="การติดต่อกับดร.ไคลเนอร์">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 1: สัญญาณเตือนภัย (Undue Alarm) - แผนการฉุกเฉิน</h2>
+                <p>อเล็กซ์และกอร์ดอนสามารถติดต่อกับ ดร.ไคลเนอร์ (Dr. Kleiner) และ อีไล แวนซ์ (Eli Vance) ผ่านหน้าจอสื่อสารที่พังยับเยิน ดร.ไคลเนอร์ แจ้งข่าวร้ายว่าแกนกลางของ Citadel กำลังเข้าสู่สภาวะหลอมละลาย (Meltdown) หากมันระเบิด City 17 ทั้งเมืองจะราบเป็นหน้ากลอง ทางรอดเดียวคือพวกเขาต้อง "กลับเข้าไป" ใน Citadel เพื่อถ่วงเวลาแกนกลางเอาไว้</p>
+            </div>
+        </div>
+
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- เพิ่ม images/ นำหน้าชื่อไฟล์แล้ว -->
+                <img src="images/4677887.jpg" alt="ด็อกโยนรถตู้">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 1: สัญญาณเตือนภัย (Undue Alarm) - บินข้ามเหว</h2>
+                <p>เนื่องจากทางเข้าปกติถูกทำลายหมด ด็อกจึงคิดแผนสุดระห่ำ โดยให้กอร์ดอนและอเล็กซ์เข้าไปนั่งในรถตู้ของกองกำลัง Combine ที่พังแล้ว จากนั้นด็อกก็ใช้พละกำลังมหาศาลโยนรถตู้ข้ามเหวลึก ทะลุช่องโหว่พุ่งตรงกลับเข้าไปในหอคอย Citadel</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 2: แทรกแซงโดยตรง -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- เพิ่ม images/ นำหน้าชื่อไฟล์แล้ว -->
+                <img src="images/4677888.jpg" alt="ภายในหอคอย Citadel">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 2: แทรกแซงโดยตรง (Direct Intervention)</h2>
+                <p>เมื่อกลับเข้ามาด้านใน กอร์ดอนและอเล็กซ์ต้องบุกฝ่าเข้าไปยังห้องควบคุมแกนกลาง ระหว่างทางพวกเขาได้เห็นความโหดร้ายของ Combine อย่างพวก "Stalkers" (มนุษย์ที่ถูกดัดแปลงอย่างทารุณให้กลายเป็นทาสรับใช้) กอร์ดอนต้องใช้ Gravity Gun แก้ปริศนาและเปิดระบบควบคุมเพื่อชะลอการระเบิดของแกนกลาง ซื้อเวลาให้ประชาชนหนีรอด</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 4: หนีตายกลางเมือง -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- เพิ่ม images/ นำหน้าชื่อไฟล์แล้ว -->
+                <img src="images/4677889.jpg" alt="พบกับบาร์นีย์">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 4: หนีตายกลางเมือง (Urban Flight)</h2>
+                <p>หลังจากถ่วงเวลาแกนกลางได้สำเร็จ ทั้งคู่หนีลงมาใต้ดิน ฝ่าดงซอมบี้และมดนรก (Antlions) จนขึ้นมาถึงพื้นผิวเมือง City 17 ที่กำลังลุกเป็นไฟ ที่นี่พวกเขาได้พบกับ บาร์นีย์ คาลฮูน (Barney Calhoun) สหายเก่าที่กำลังรวบรวมกลุ่มต่อต้านและประชาชนเพื่อเตรียมอพยพไปยังสถานีรถไฟ</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 5: ทางออก 17 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <!-- เพิ่ม images/ นำหน้าชื่อไฟล์แล้ว -->
+                <img src="images/4677890.jpg" alt="การระเบิดของ Citadel">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 5: ทางออก 17 (Exit 17)</h2>
+                <p>กอร์ดอนและอเล็กซ์ทำหน้าที่คุ้มกันประชาชนขึ้นรถไฟขบวนสุดท้าย หลังจากปะทะกับหุ่นรบ Strider อย่างดุเดือด ทั้งสองก็กระโดดขึ้นรถไฟได้สำเร็จ ในขณะที่รถไฟกำลังวิ่งออกจากเมือง หอคอย Citadel ก็ทนรับความร้อนไม่ไหวและระเบิดออกอย่างรุนแรง คลื่นกระแทกมหาศาลพุ่งเข้าซัดขบวนรถไฟของพวกเขา ปูทางไปสู่เหตุการณ์ใน Episode Two...</p>
+            </div>
+        </div>
+
+        <!-- ปุ่มกลับหน้าหลัก -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn">กลับสู่หน้าหลัก / เลือกภาคอื่น</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Half-Life Story Archive | ข้อมูลและรูปภาพรวบรวมโดยแฟนเกม
+    </footer>
+
+</body>
+</html>

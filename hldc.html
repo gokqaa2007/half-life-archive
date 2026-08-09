@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half-Life: Decay</title>
+    <style>
+        /* สไตล์พื้นฐาน โทนสีส้ม HEV Suit */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1510; /* ดำอมน้ำตาลเข้ม */
+            color: #e8dcd0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .nav-bar {
+            text-align: center;
+            padding: 15px;
+            background-color: #0d0a08;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            border-bottom: 2px solid #ff9900;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ff9900; /* สีส้ม HEV */
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e68a00;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.5);
+        }
+
+        /* ส่วนหัวเรื่อง (Header) */
+        header {
+            background: linear-gradient(rgba(26, 21, 16, 0.85), rgba(26, 21, 16, 0.95)), url('images/dcchapter1.png') center/cover;
+            color: #ff9900;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #ff9900;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 800px;
+            margin: 15px auto 0;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* สไตล์เนื้อเรื่องแต่ละบท */
+        .chapter-box {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: #241d16;
+            border-radius: 10px;
+            margin-bottom: 2.5rem;
+            border-left: 5px solid #ff9900;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .chapter-box:hover {
+            transform: translateY(-5px);
+            border-color: #ffb84d;
+        }
+        
+        .chapter-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .chapter-image img {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #4a3c2c;
+        }
+        .chapter-text {
+            flex: 2;
+            min-width: 300px;
+            padding: 20px 30px;
+        }
+        .chapter-text h2 {
+            color: #ff9900;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #4a3c2c;
+            padding-bottom: 10px;
+        }
+        .chapter-text h3 {
+            color: #ffb84d;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .chapter-text p {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        /* บทโบนัส สีจะต่างออกไป (โทนสีเขียวของ Vortigaunt) */
+        .bonus-chapter {
+            border-left: 5px solid #00ff00;
+            background-color: #112211;
+        }
+        .bonus-chapter h2 { color: #00ff00; border-color: #004400; }
+        .bonus-chapter h3 { color: #88ff88; }
+        .bonus-chapter .chapter-image img { border-color: #00ff00; }
+
+        footer {
+            background-color: #0d0a08;
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            margin-top: 3rem;
+            border-top: 2px solid #ff9900;
+        }
+
+        @media (max-width: 800px) {
+            .chapter-box { flex-direction: column; }
+            .chapter-text { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="index.html" class="btn">⬅ กลับไปหน้าหลัก</a>
+    </div>
+
+    <header>
+        <h1>Half-Life: Decay</h1>
+        <p>ผลกระทบอีกด้านของอุบัติการณ์ Black Mesa ผ่านสายตาของสองนักวิทยาศาสตร์หญิง ดร.จีน่า ครอส และ ดร.โคเล็ตต์ กรีน แห่งศูนย์วิจัย Anomalous Materials</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- บทที่ 1 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <img src="images/dcchapter1.png" alt="ดร.โรเซนเบิร์ก และ ดร.เคลเลอร์">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 1: การเข้าถึงคู่ขนาน (Dual Access)</h2>
+                <h3>ดร.โรเซนเบิร์ก และ ดร.เคลเลอร์ กำลังปรึกษาหารือกันโดยมี โคเล็ตต์ กรีน และ จีน่า ครอส เฝ้ามองอยู่</h3>
+                <p>ในบทแรกนี้ จีน่า ครอส และ โคเล็ตต์ กรีน มีหน้าที่ส่งมอบตัวอย่างคริสตัลทดสอบให้กับ กอร์ดอน ฟรีแมน และทำการเปิดใช้งานเครื่อง Anti-Mass Spectrometer ก่อนที่จะเกิด "อุบัติการณ์" (Resonance Cascade) ขึ้นเพียงไม่กี่อึดใจ</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 2 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <img src="images/dcchapter2.png" alt="พื้นที่ฝึกซ้อมใน Sector A">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 2: เส้นทางอันตราย (Hazardous Course)</h2>
+                <h3>พื้นที่ฝึกซ้อมใน Sector A</h3>
+                <p>จีน่า ครอส และ โคเล็ตต์ กรีน ต้องคุ้มกัน ดร.โรเซนเบิร์ก ฝ่าดงอันตรายผ่านพื้นที่ Hazard Course (ศูนย์ฝึกซ้อม Sector A) เพื่อขึ้นสู่พื้นผิวและส่งสัญญาณขอความช่วยเหลือจากกองทัพ</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 3 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <img src="images/dcchapter3.png" alt="ครอสและกรีนในโกดัง">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 3: สัญญาณสู่พื้นผิว (Surface Call)</h2>
+                <h3>โคเล็ตต์ กรีน และ จีน่า ครอส กำลังหาทางผ่านโกดังสินค้า</h3>
+                <p>ครอส, กรีน และโรเซนเบิร์กขึ้นมาถึงพื้นผิวสำเร็จโดยมีเป้าหมายคือการเข้าถึงศูนย์สื่อสารผ่านดาวเทียม แต่ทว่าประตูหน้าศูนย์กลับถูกล็อก ทำให้ครอสและกรีนต้องอ้อมไปทางโกดังใกล้เคียงเพื่อเข้าทางประตูหลังที่ไม่ได้ล็อก เมื่อเข้าไปด้านในได้ พวกเธอต้องปรับทิศทางจานดาวเทียมด้วยตัวเอง ทำให้โรเซนเบิร์กสามารถติดต่อกองทัพได้สำเร็จ ในขณะที่ครอสและกรีนต้องมุ่งหน้ากลับลงไปที่ Sector C</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 4 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <img src="images/dcchapter4.png" alt="ดร.เคลเลอร์สั่งการครอสและกรีน">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 4: การสั่นพ้อง (Resonance)</h2>
+                <h3>ริชาร์ด เคลเลอร์ กำลังสั่งการให้ โคเล็ตต์ กรีน และ จีน่า ครอส เปิดระบบสนามพลังหน่วงอีกครั้ง</h3>
+                <p>ครอสและกรีนกลับมาที่แผนก Anomalous Materials และสมทบกับ ดร.เคลเลอร์ เขาตัดสินใจว่าวิธีที่ดีที่สุดคือการเปิดระบบสนามพลังหน่วง (Dampening Fields) อีกครั้ง ซึ่งเขาเชื่อว่าจะหยุดเหตุการณ์ Resonance Cascade ได้ ทั้งสองคนเดินทางผ่านศูนย์วิจัยและสามารถรีเซ็ตล็อกของสนามพลังหน่วงทั้งระบบหลักและระบบรองได้สำเร็จ</p>
+                <p>แต่ทว่าสนามพลังกลับล้มเหลวลงในเวลาต่อมา ดร.เคลเลอร์ค้นพบว่าความล้มเหลวนี้เกิดจาก "การจงใจแทรกแซง" จากอีกฝั่งของรอยแยกมิติ และตระหนักได้ว่าเอเลี่ยนเหล่านี้อาจไม่ได้หลุดมาที่นี่ด้วยความบังเอิญ</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 5 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <img src="images/dcchapter5.png" alt="หอพักปีกใต้ ชั้น 3">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 5: ความรุนแรงภายใน (Domestic Violence)</h2>
+                <h3>หอพักปีกใต้ ชั้น 3 (Dormitories South Wing, Level 3)</h3>
+                <p>เคลเลอร์คิดแผนที่จะสร้าง "การย้อนกลับของการสั่นพ้อง" (Resonance Reversal) โดยใช้เครื่องส่งสัญญาณระบุตำแหน่งต้นแบบ (Prototype Displacement Beacon) ใน Gamma Labs แต่เขาจำเป็นต้องมีดาวเทียมอยู่บนวงโคจรก่อนจึงจะทำตามแผนได้ ศูนย์ปล่อยดาวเทียมพร้อมดำเนินการ แต่ติดที่กองทัพได้สั่งปิดน่านฟ้า หากจะยกเลิกการปิดน่านฟ้า ต้องใช้รหัส All-Clear</p>
+                <p>เคลเลอร์, กรีน และครอส จึงเดินทางไปยังหอพักชั้น 3 เพื่อตามหา รปภ. ที่ถือรหัสนี้ ภารกิจถูกขัดขวางโดยทหารหน่วย HECU ที่กำลังไล่สังหารเจ้าหน้าที่ ในที่สุดพวกเธอก็พบ รปภ. และได้รหัสมา ทั้งสามคนจึงออกเดินทางไปยังศูนย์ควบคุมการจราจรทางอากาศของ Black Mesa บนพื้นผิว</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 6 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <img src="images/dcchapter6.png" alt="ศูนย์ควบคุมทางอากาศ Black Mesa">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 6: รหัสเขียว (Code Green)</h2>
+                <h3>ศูนย์ควบคุมการจราจรทางอากาศ Black Mesa</h3>
+                <p>ครอสและกรีน หลังจากฝ่าฟันการต่อสู้กับทหาร HECU หลายระลอก และสามารถสอยเฮลิคอปเตอร์ V-22 Osprey ไปได้ พวกเธอก็ยึดอาคารควบคุมการจราจรทางอากาศได้สำเร็จ พวกเธอจัดการป้อนรหัส All-Clear และยกเลิกการปิดน่านฟ้าของกองทัพ จากนั้นจึงกลับไปหาเคลเลอร์และมุ่งหน้ากลับลงไปใต้ดินเพื่อหาทางไปที่ Gamma Labs</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 7 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <img src="images/dcchapter7.png" alt="ภายใน Gamma Labs">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 7: ดงกระสุน (Crossfire)</h2>
+                <h3>ภายใน Gamma Labs</h3>
+                <p>ภารกิจต่อไปคือการยกเครื่องส่งสัญญาณระบุตำแหน่งต้นแบบขึ้นสู่พื้นผิวด้วยระบบแมนนวล เคลเลอร์มาถึงพื้นที่ห้องแล็บหลักแล้ว แต่ไม่สามารถยกเครื่องขึ้นได้เนื่องจากมีสิ่งกีดขวาง หลังจากลอบเข้าแล็บผ่านช่องระบายน้ำ ครอสและกรีนต้องเดินทางผ่านชั้นล่างของแล็บ ปะทะกับทั้งทหาร HECU และเอเลี่ยนจากมิติ Xen ตลอดทาง จนกระทั่งพวกเธอไปถึงตัวเครื่อง เคลียร์สิ่งกีดขวาง และยกเครื่องส่งสัญญาณขึ้นไปได้สำเร็จ</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 8 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <img src="images/dcchapter8.png" alt="ภายในศูนย์กักกันเอเลี่ยน">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 8: ความเข้มข้น (Intensity)</h2>
+                <h3>ภายในศูนย์กักกันเอเลี่ยน (Alien Quarantine Labs)</h3>
+                <p>ครอสและกรีนกลับมาหาเคลเลอร์ เขาได้มอบหมายภารกิจให้ไปเปิดระบบ Beam Matrix ซึ่งเป็นแหล่งพลังงานที่จำเป็นสำหรับเครื่องส่งสัญญาณต้นแบบ พวกเธอต้องลงลิฟต์ไปยังแล็บกักกันเอเลี่ยน ซึ่งตอนนี้ถูกครอบครองโดยพวกเอเลี่ยนไปแล้ว</p>
+                <p>พวกเธอไปถึง Beam Matrix และพยายามเปิดใช้งานมัน ในขณะเดียวกันก็ต้องคอยป้องกันระบบจากพวก Vortigaunts และ Grunts ที่เทเลพอร์ตเข้ามาอย่างต่อเนื่อง ในที่สุด Beam Matrix ก็ทำงาน ครอสและกรีนจึงกลับไปหาเคลเลอร์ที่กำลังเตรียมการขั้นสุดท้าย</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 9 -->
+        <div class="chapter-box">
+            <div class="chapter-image">
+                <img src="images/dcchapter9.png" alt="ภายใน Gamma Labs กับ ดร.เคลเลอร์">
+            </div>
+            <div class="chapter-text">
+                <h2>บทที่ 9: รอยแยก (Rift)</h2>
+                <h3>ภายใน Gamma Labs กับ ดร.เคลเลอร์</h3>
+                <p>ครอสและกรีนถูกบีบให้ต้องป้องกันเครื่องส่งสัญญาณจากการโจมตีของเอเลี่ยนหลากหลายชนิด รวมถึงยาน Manta Ray ท่ามกลางการต่อสู้นั้น ทั้งสองตัวละครถูกดึงเข้าไปในสภาวะมิติบิดเบี้ยว (Harmonic Reflux) ในระหว่างเหตุการณ์นี้ จะได้ยินเสียงของ ดร.โรเซนเบิร์ก เตือนว่าเขา "ไม่สามารถเปิดพอร์ทัลไว้ได้นานกว่านี้แล้ว" (เชื่อมโยงกับตอนที่บาร์นี่เดินทางไปในมิติ Xen ในภาค Blue Shift)</p>
+                <p>ดร.ครอส และ ดร.กรีน กลับมาได้อย่างปลอดภัย และ ดร.เคลเลอร์ ก็แสดงความยินดีกับความสำเร็จ การย้อนกลับของการสั่นพ้องน่าจะส่งผลให้ Resonance Cascade อ่อนกำลังลง อย่างไรก็ตาม ยังคงเป็นปริศนาว่าเหล่าดอกเตอร์จะรอดพ้นจากการระเบิดของนิวเคลียร์ในตอนจบของภาค Opposing Force ไปได้หรือไม่</p>
+            </div>
+        </div>
+
+        <!-- บทที่ 10 (Bonus) -->
+        <div class="chapter-box bonus-chapter">
+            <div class="chapter-image">
+                <img src="images/dcchapter10.png" alt="R-4913 และ X-8973 ทวงคืนคริสตัล">
+            </div>
+            <div class="chapter-text">
+                <h2>บทโบนัส: การโจมตีของมิติ Xen (Xen Attacks)</h2>
+                <h3>R-4913 และ X-8973 กำลังทวงคืนคริสตัลที่ถูกขโมยไปโดย Black Mesa</h3>
+                <p>นี่คือบทพิเศษของ Half-Life: Decay ในบทนี้ผู้เล่นจะได้รับบทเป็น Vortigaunts สองตัวที่มีชื่อรหัสว่า "Drone Subjects" X-8973 และ R-4913 พวกมันต้องทวงคืนตัวอย่างคริสตัลที่ถูกใช้ในการทดสอบ (และถูก G-Man ขโมยไป) เพื่อนำกลับไปให้ Nihilanth ผู้นำของพวกมัน</p>
+                <p>สิ่งที่น่าสนใจคือ ด่านนี้เชื่อมต่อกับโรงจอดรถที่เห็นในช่วงท้ายของภาค Opposing Force ซึ่งเป็นสถานที่ที่ระเบิดนิวเคลียร์ถูกกู้โดย Adrian Shephard และถูก G-Man เปิดระบบการทำงานใหม่อีกครั้ง</p>
+            </div>
+        </div>
+
+        <!-- ปุ่มกลับหน้าหลัก -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn">กลับสู่หน้าหลัก / เลือกภาคอื่น</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Half-Life Story Archive | ข้อมูลรวบรวมโดยแฟนเกม
+    </footer>
+
+</body>
+</html>
